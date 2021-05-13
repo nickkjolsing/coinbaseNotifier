@@ -1,0 +1,7 @@
+# Coinbase Pro API Keys
+export coinbase_api_key='insert Coinbase Pro API key between these'
+export coinbase_secret='insert Coinbase Pro API secret between these'
+export coinbase_passphrase='insert Coinbase Pro API passphrase between these'
+
+# Discord Webhook
+export discord_webhook_url='insert Discord Webhook URL between these'
