@@ -1,2 +1,5 @@
-# coinbaseNotifier
-Discord notification bot when buy orders have been filled on Coinbase Pro.
+# Coinbase Pro Order Fill Notifier
+
+This program written in Python sends a Discord message whenever a new order from Coinbase Pro fills.
+
+I was annoyed that there was no option for notifications from Coinbase Pro...so I created one myself!
