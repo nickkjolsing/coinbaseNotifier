@@ -49,7 +49,9 @@ while(1):
 
     # Checks to see if newest order already in dictionary, otherwise add it
     for index, order in enumerate(allOrders):
-        if not(allOrders[0]['id'] in orders.values()):
+        if(allOrders['message'] == 'IP does not match IP whitelist'):
+            print("Update whitelisted IP for Coinbase API")
+        if (not(allOrders[0]['id'] in orders.values())):
             if (allOrders[0]['settled'] == True):
                 orders.update({'%d'%index: allOrders[index]['id']})
                 params = {'order_id':allOrders[0]['id']}
