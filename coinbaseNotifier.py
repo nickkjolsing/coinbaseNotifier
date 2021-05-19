@@ -48,8 +48,8 @@ while(1):
     allOrders = json.loads(response.text)
 
     # Checks to see if Coinbase Pro API IP is correct
-    if(allOrders['message'] == 'IP does not match IP whitelist'):
-            print("Update whitelisted IP for Coinbase API")
+    # if(allOrders['message'] == 'IP does not match IP whitelist'):
+    #         print("Update whitelisted IP for Coinbase API")
     
     # Checks to see if newest order already in dictionary, otherwise add it
     for index, order in enumerate(allOrders):
