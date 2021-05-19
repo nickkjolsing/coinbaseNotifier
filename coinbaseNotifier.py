@@ -47,13 +47,10 @@ while(1):
     response = requests.get(api_url + 'orders', auth=auth, params=params)
     allOrders = json.loads(response.text)
 
-    # Checks to see if IP needs updating
-    if(allOrders['message'] == 'IP does not match IP whitelist'):
-            print("Update whitelisted IP for Coinbase API")
-            break
-
     # Checks to see if newest order already in dictionary, otherwise add it
     for index, order in enumerate(allOrders):
+        if(allOrders['message'] == 'IP does not match IP whitelist'):
+            print("Update whitelisted IP for Coinbase API")
         if (not(allOrders[0]['id'] in orders.values())):
             if (allOrders[0]['settled'] == True):
                 orders.update({'%d'%index: allOrders[index]['id']})
